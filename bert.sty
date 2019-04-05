@@ -11,10 +11,5 @@
 \newcounter{magicrownumbers}
 \newcommand\rownumber{\stepcounter{magicrownumbers}\arabic{magicrownumbers}}
 
-\newenvironment{hilbert}{%
-\setcounter{magicrownumbers}{0}
-\begin{tabular*}{\textwidth}{@{\makebox[2em][l]{\rownumber\space}}|l@{\extracolsep{\fill}}l}
-}{%
-\end{tabular*}
-}
+\newenvironment{hilbert}{\setcounter{magicrownumbers}{0}\begin{tabular*}{\textwidth}{@{\makebox[2em][l]{\rownumber\space}}|l@{\extracolsep{\fill}}l}}{\end{tabular*}}
 \endinput

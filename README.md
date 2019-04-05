@@ -6,10 +6,10 @@ Example Usage:
 \usepackage{bert}
 
 \begin{document}
-    \begin{hilbet}
+    \begin{hilbert}
         $A$ & Assumption \\
         $A \to B \to A$ & Axiom 1 \\
         $B \to A$ & MP from 1 and 2
-    \end{hilbet}
+    \end{hilbert}
 \end{document}
 ```
