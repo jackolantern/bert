@@ -1,0 +1,20 @@
+% \NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{bert}[2019/04/04 Bert]
+
+\RequirePackage{lmodern}
+\RequirePackage{array}
+\RequirePackage{etoolbox}
+
+\ProcessOptions\relax
+
+\preto\tabular{\setcounter{magicrownumbers}{0}}
+\newcounter{magicrownumbers}
+\newcommand\rownumber{\stepcounter{magicrownumbers}\arabic{magicrownumbers}}
+
+\newenvironment{hilbert}{%
+\setcounter{magicrownumbers}{0}
+\begin{tabular*}{\textwidth}{@{\makebox[2em][l]{\rownumber\space}}|l@{\extracolsep{\fill}}l}
+}{%
+\end{tabular*}
+}
+\endinput
